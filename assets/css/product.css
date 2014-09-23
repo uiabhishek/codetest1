@@ -1,0 +1,90 @@
+.container {
+	margin: 0 auto;
+	width: 845px;
+}
+.hero{
+	background: none repeat scroll 0 0 #E5E5E5;
+	min-height: 150px;
+	width: 840px;
+	border:2px solid #BFBFBF;
+}
+.products{
+	clear:both;
+	float: left;
+	margin-bottom: 20px;
+	width: 842px;
+}
+
+.row {
+	clear: both;
+	padding-top: 18px;
+}
+.prd{
+	background: none repeat scroll 0 0 #e5e5e5;
+	border: 2px solid #bfbfbf;
+	float: left;
+	margin: 0 20px 0 0;
+	min-height: 355px;
+	position: relative;
+	width: 263px;
+	text-align: center;
+}
+.prd > p{
+	font-size: 13px;
+	margin: 25px auto;
+	text-align: center;
+	width: 220px;
+	min-height:48px;
+}
+.prd > ul{
+	display:none;
+}
+div.last{
+	margin-right:0px;
+}
+.imgDiv{
+	width:150px;
+	float:left;
+	position:relative;
+}
+.content_div {
+	float: left;
+	padding: 0 25px;
+	position: relative;
+	width: 393px;
+}
+.btn{
+	background-color: #b7b7b7;
+	border: 1px solid #727272;
+	text-align: center;
+}
+.btn.addCart{
+	cursor:pointer;
+	width: 180px;
+	padding: 7px 8px 9px;
+}
+.btn.viewmore{
+	font-size: 19px;
+	margin: 42px auto 0;
+	padding: 5px 8px;
+	width: 217px;
+}
+.shopping_div {
+	float: left;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	width: 200px;
+}
+ul{
+	margin:0px;
+	padding:0px 15px;
+}
+.pricing{
+	font-size:20px;
+}
+.prd_img{
+	margin-top:35px;
+}
+.prd_price{
+}

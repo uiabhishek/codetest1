@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+ <head>
+	  <meta charset="UTF-8">
+	  <title>[Your Name] - Interview Test</title>
+	  <script src="assets/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	  <link rel="stylesheet" href="assets/css/product.css" type="text/css"/>
+ </head>
+ <body>
+	<div class="container">
+		<div class="hero">
+			<div class="imgDiv">
+				<img src="assets/images/01_md.jpg" width="148px" height="148px"/>
+			</div>
+			<div class="content_div">
+				<p>Whirlpool 4.5 Cu. Ft. Duet Steam Front Load Washer (Color: Cranberry Red) ENERGY STAR</p>
+				<ul>
+					<li>ENERGY STAR qualified</li>
+					<li>NSF Certified Sanitary cycles</li>
+					<li>FanFresh option</li>
+				</ul>
+			</div>
+			<div class="shopping_div">
+				<div class="btn addCart">Add to Cart</div><br/>
+				<span class="pricing" id="cart_pricing">$1,599.00</span>
+			</div>
+		</div>
+		<div class="products">
+			<div class="row">
+				<div class="prd">
+					<div class="prd_img">
+						<img src="assets/images/01_sm.jpg"/>
+					</div>
+					<p>Whirlpool 4.5 Cu. Ft. Duet Steam Front Load Washer (Color: Cranberry Red) ENERGY STAR</p>
+					<span class="pricing">$1,599.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>ENERGY STAR qualified</li>
+						<li>NSF Certified Sanitary cycles</li>
+						<li>FanFresh option</li>
+					</ul>
+				</div>
+				<div class="prd">
+					<div class="prd_img">
+						<img src="assets/images/02_sm.jpg"/>
+					</div>
+					<p>Whirlpool 12.3 Cu. Ft. Front Load Washer (Color: Lunar Silver) ENERGY STAR</p>
+					<span class="pricing">$1,599.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>6th Sense technology</li>
+						<li>Oxi Dispense option</li>
+						<li>Internal water heater</li>
+					</ul>
+				</div>
+				<div class="prd last">
+					<div class="prd_img">
+						<img src="assets/images/03_sm.jpg"/>
+					</div>
+					<p>Maytag 4.5 Cu. Ft. Front Load Steam Washer (Color: White) ENERGY STAR</p>
+					<span class="pricing">$1,499.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>14 automatic cycles</li>
+						<li>Clean Washer cycle with Affresh</li>
+						<li>CEE Tier III qualified</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="prd">
+					<div class="prd_img">
+						<img src="assets/images/04_sm.jpg"/>
+					</div>
+					<p>Electrolux 4.7 Cu. Ft. Wave-TouchTM Front Load Washer (Color: Silver Sands) ENERGY STAR</p>
+					<span class="pricing">$1,499.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>4.5 cu. ft. stainless steel wash basket</li>
+						<li>1400 RPM maximum spin speed</li>
+						<li>Direct Inject wash system</li>
+					</ul>
+				</div>
+				<div class="prd">
+					<div class="prd_img">
+						<img src="assets/images/05_sm.jpg"/>
+					</div>
+					<p>Maytag 4.5 Cu. Ft. Front Load Washer (Color: Oxide) ENERGY STAR</p>
+					<span class="pricing">$1,499.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>Smooth Spin technology</li>
+						<li>Quiet Wash Plus noise reduction system</li>
+						<li>FanFresh option</li>
+					</ul>
+				</div>
+				<div class="prd last">
+					<div class="prd_img">
+						<img src="assets/images/06_sm.jpg"/>
+					</div>
+					<p>Maytag 6.5 Cu. Ft. Front Load Washer (Color: White) ENERGY STAR</p>
+					<span class="pricing">$1,599.00</span>
+					<div class="btn viewmore">View More</div>
+					<ul>
+						<li>14 automatic cycles</li>
+						<li>Clean Washer cycle with Affresh</li>
+						<li>CEE Tier III qualified</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		/*$.ajax({
+			url: "http://m.lowes.com/IntegrationServices/resources/productList/json/v3_0/4294857975?langId=-1&storeId=10702&catalogId=10051&nValue=4294857975&storeNumber=0595&pageSize=20&firstRecord=0&refinements=5003703",
+			type:"GET",
+			crossDomain: true,
+			dataType: "JSON",
+			data:null,
+			//data:'',
+			success:function(resp){
+				alert(resp);
+			},
+			error:function(resp){
+				
+			}
+		});*/
+	
+		$(".prd").hover(function(){
+			var img_loc = $(this).children(".prd_img").children("img").attr("src").replace("sm","md");
+			$(".imgDiv").children("img").attr("src",img_loc);
+			var desc=$(this).children("p").html();
+			var desc_li=$(this).children("ul").html();
+			var pricing=$(this).children("span").text();
+			$(".content_div").children("p").html(desc);
+			$(".content_div").children("ul").html(desc_li);
+			$("#cart_pricing").text(pricing);
+		});
+
+		$(".addCart").click(function(){
+			alert($("#cart_pricing").text());
+		});
+	});
+	
+	
+	</script>
+ </body>
+</html>
